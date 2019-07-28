@@ -1,0 +1,12 @@
+
+<script>
+  let editor = document.createElement('div');
+  editor.style.cssText = "border: 1px solid; margin: 8px";
+  editor.contentEditable = 'true';
+  editor.textContent = `If you got here from a home screen button, the window should automatically close.
+Instead, it doesn't and the page is in a weird state where some rendering happens and clicking on this
+editable div doesn't bring up the keyboard.`;
+  document.documentElement.append(editor);
+  // requestAnimationFrame just so the textarea above renders before the close call.
+  requestAnimationFrame(() => window.close());
+</script>
