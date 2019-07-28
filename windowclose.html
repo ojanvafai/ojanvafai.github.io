@@ -8,5 +8,5 @@ Instead, it doesn't and the page is in a weird state where some rendering happen
 editable div doesn't bring up the keyboard.`;
   document.documentElement.append(editor);
   // requestAnimationFrame just so the textarea above renders before the close call.
-  requestAnimationFrame(() => window.close());
+  setTimeout(() => window.close(), 5000);
 </script>
